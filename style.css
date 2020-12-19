@@ -1,35 +1,228 @@
-:root{
-  --pale-violet: hsl(276, 100%, 81%);
-  --moderate-violet: hsl(276, 55%, 52%);
-  --desaturated-dark-violet: hsl(271, 15%, 43%);
-  --grayish-blue: hsl(206, 6%, 79%);
-  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
-  --dark-grayish-violet: hsl(270, 7%, 64%);
+:root {
+  --pale-violet: #d89eff;
+  --moderate-violet: #9241c8;
+  --desaturated-dark-violet: #6e5d7e;
+  --grayish-blue: #c6cacd;
+  --very-dark-desaturated-violet: #3e2753;
+  --dark-grayish-violet: #a39daa;
   /* *****Gradients***** */
   /* primary G */
-  --light-magenta: hsl(293, 100%, 63%);
-  --light-violet: hsl(264, 100%, 61%);
+  --light-magenta: #e942ff;
+  --light-violet: #8838ff;
+  --gradient: linear-gradient(12deg, #8838ff 9%, #e942ff 90%);
 
-/* Secondary G */
---white: hsl(0, 0%, 100%);
---light-grayish-violet: hsl(270, 20%, 96%);
---very-dark-desaturated-violet: hsl(271, 36%, 24%);
---very-light-magenta: hsl(289, 100%, 72%);
+  /* Secondary G */
+  --white: #ffffff;
+  --light-grayish-violet: #f5f3f7;
+  --very-dark-desaturated-violet: #3e2753;
+  --very-light-magenta: #e570ff;
 }
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Rubik', sans-serif;
+body {
+  font-family: "Rubik", sans-serif;
   font-size: 16px;
-
+  background-color: var(--light-grayish-violet);
 }
 
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+button {
+  background-color: transparent;
+  color: var(--light-grayish-violet);
+  border: none;
+}
+
+/* Phone */
+.phone {
+  border: 15px solid var(--white);
+  width: 25%;
+  border-radius: 1.5rem;
+  background-color: #f5f3f8;
+}
+
+.phone__top {
+  background: var(--gradient);
+  border-top-left-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.phone__top-inset {
+  width: 55%;
+  height: 25px;
+
+  margin: 0 auto 1rem auto;
+  background-color: #fff;
+
+  border-bottom-left-radius: 1.3rem;
+  border-bottom-right-radius: 1.3rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 95%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.user button {
+  font-size: 1.3rem;
+}
+
+.user__details {
+  display: flex;
+  align-items: center;
+
+  color: var(--white);
+  margin-left: 0.4rem;
+}
+
+.user__img {
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  width: 18%;
+}
+
+.user__img img {
+  border-radius: 50%;
+}
+
+.user__info {
+  margin-left: 1rem;
+}
+
+.user__info h4 {
+  margin-bottom: 0.15rem;
+}
+
+.user__info small {
+  color: var(--pale-violet);
+}
+
+.phone__contents {
+  max-width: 95%;
+  margin: 0.5rem auto 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0.3rem 0;
+  padding: 0.5rem 0.3rem;
+  border-radius: 0.6rem;
+  max-width: 65%;
+}
+
+.chat-left {
+  align-self: flex-start;
+
+  color: var(--moderate-violet);
+  background-color: #ede5f4;
+  border-bottom-left-radius: 0;
+}
+
+.chat-right {
+  align-self: flex-end;
+
+  background-color: var(--white);
+  border-bottom-right-radius: 0;
+}
+
+.chat-images {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.chat-images img {
+  max-width: 30%;
+  border-radius: 0.4rem;
+}
+
+.chat:last-of-type,
+.chat:nth-of-type(7) {
+  max-width: 82%;
+  background: linear-gradient(90deg, #e942ff 25%, #8838ff 100%);
+}
+
+.chat-prices {
+  background: var(--gradient);
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-prices .radio {
+  border: solid var(--very-light-magenta);
+  width: 10%;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.chat-prices__info {
+  flex-grow: 1;
+  margin-left: 0.9rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-prices h4 {
+  font-weight: 400;
+}
+
+.phone__bottom {
+  max-width: 95%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 1.3rem;
+
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.phone__bottom input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0.1rem;
+}
+
+.phone__bottom input::placeholder {
+  color: var(--grayish-blue);
+}
+
+.phone__bottom button {
+  background-color: var(--very-dark-desaturated-violet);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;
