@@ -16,18 +16,9 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Frontend Mentor | CSS Chat Illustration</title>
   </head>
   <body>
     <div class="main-content">
@@ -37,7 +28,85 @@
 
     <div class="main-container">
       <!-- Adler's part -->
-      <div class="main-container__chat-app-container"></div>
+      <div class="phone">
+        <div class="phone__top">
+          <div class="phone__top-inset"></div>
+          <div class="user">
+            <button>
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <div class="user__details">
+              <div class="user__img">
+                <img src="./images/avatar.jpg" alt="user-avatar" />
+              </div>
+
+              <div class="user__info">
+                <h4>Samuel Green</h4>
+                <small>Available to Walk</small>
+              </div>
+            </div>
+            <button>
+              <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="phone__contents">
+          <div class="chat chat-left">
+            <p>That sounds great. I’d be happy with that.</p>
+          </div>
+          <div class="chat chat-left">
+            <p>Could you send over some pictures of your dog, please?</p>
+          </div>
+
+          <div class="chat chat-right chat-images">
+            <img src="./images/dog-image-1.jpg" alt="" />
+            <img src="./images/dog-image-2.jpg" alt="" />
+            <img src="./images/dog-image-3.jpg" alt="" />
+          </div>
+          <div class="chat chat-right">
+            <p>Here are a few pictures. She’s a happy girl!</p>
+          </div>
+          <div class="chat chat-right">
+            <p>Can you make it?</p>
+          </div>
+
+          <div class="chat chat-left">
+            <p>
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+          </div>
+
+          <div class="chat chat-prices">
+            <div class="radio"></div>
+            <div class="chat-prices__info">
+              <h4>30 minute walk</h4>
+              <h2>$29</h2>
+            </div>
+          </div>
+
+          <div class="chat chat-prices">
+            <div class="radio"></div>
+            <div class="chat-prices__info">
+              <h4>1 hour walk</h4>
+              <h2>$49</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone__bottom">
+          <input
+            type="text"
+            name="message"
+            disabled
+            placeholder="Type a message…"
+          />
+          <button>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
 
       <!-- Keren's part -->
       <div class="main-container__content-container">
@@ -52,11 +121,6 @@
         </div>
       </div>
     </div>
-    Samuel Green Available to Walk That sounds great. I’d be happy with that.
-    Could you send over some pictures of your dog, please? Here are a few
-    pictures. She’s a happy girl! Can you make it? She looks so happy! The time
-    we discussed works. How long shall I take her out for? 30 minute walk $29 1
-    hour walk $49 Type a message…
 
     <div class="attribution">
       Challenge by
@@ -65,5 +129,7 @@
       >. Coded by <a href="https://github.com/kerenkalifa">Keren Kalifa </a> &
       <a href="https://github.com/adluders">Adler Luders</a>.
     </div>
+
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   </body>
 </html>
