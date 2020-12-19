@@ -9,7 +9,7 @@
   /* primary G */
   --light-magenta: hsl(293, 100%, 63%);
   --light-violet: hsl(264, 100%, 61%);
-
+  --gradient-primary: linear-gradient(12deg, #8838ff 9%, #e942ff 90%);
 /* Secondary G */
 --white: hsl(0, 0%, 100%);
 --light-grayish-violet: hsl(270, 20%, 96%);
@@ -36,4 +36,26 @@ body{
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.shape{
+  width: 300px;
+  height: 85%;
+  position: absolute;
+  z-index: -1;
+}
+
+.shape-left{
+  border-radius: 0 0 300px 300px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d942ff), to(#8838ff));
+  background: var(--gradient-primary);
+  left: -60px;
+}
+
+.shape-right{
+  border-radius: 300px 300px 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d942ff), to(#8838ff));
+  background: #F7F5FA;
+  right: -60px;
+  bottom: 0;
 }
