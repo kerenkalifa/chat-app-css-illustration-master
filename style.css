@@ -27,7 +27,7 @@
 body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
-  background-color: var(--light-grayish-violet);
+  background-color: #fafafa;
 }
 
 img {
@@ -40,6 +40,34 @@ button {
   color: var(--light-grayish-violet);
   border: none;
 }
+
+.main-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.shape{
+  width: 300px;
+  height: 85%;
+  position: absolute;
+  z-index: -1;
+}
+
+.shape-left{
+  border-radius: 0 0 300px 300px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d942ff), to(#8838ff));
+  background: var(--gradient-primary);
+  left: -60px;
+}
+
+.shape-right{
+  border-radius: 300px 300px 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d942ff), to(#8838ff));
+  background: #F7F5FA;
+  right: -60px;
+  bottom: 0;
+}
+
 
 /* Phone */
 .phone {
@@ -229,26 +257,4 @@ button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-.shape{
-  width: 300px;
-  height: 85%;
-  position: absolute;
-  z-index: -1;
-}
-
-.shape-left{
-  border-radius: 0 0 300px 300px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d942ff), to(#8838ff));
-  background: var(--gradient-primary);
-  left: -60px;
-}
-
-.shape-right{
-  border-radius: 300px 300px 0 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d942ff), to(#8838ff));
-  background: #F7F5FA;
-  right: -60px;
-  bottom: 0;
 }
